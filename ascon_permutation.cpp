@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdint>
+#include "ascon_permutation.h"
 
 // 5-bit S-box implementation as a lookup table
 uint8_t SBOX[32] = {
