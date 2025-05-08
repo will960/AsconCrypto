@@ -84,7 +84,7 @@ std::vector<uint8_t> ascon_xof128(const std::vector<uint8_t>& msg, size_t L) {
     return output;
 }
 
-// Test code
+//Debug
 int main() {
     std::string input_str = "Hello, Ascon!";
     std::vector<uint8_t> input_msg(input_str.begin(), input_str.end());
