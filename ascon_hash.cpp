@@ -84,22 +84,3 @@ std::vector<uint8_t> ascon_xof128(const std::vector<uint8_t>& msg, size_t L) {
     return output;
 }
 
-//Debug
-int main() {
-    std::string input_str = "Hello, Ascon!";
-    std::vector<uint8_t> input_msg(input_str.begin(), input_str.end());
-
-    std::vector<uint8_t> hash_output = ascon_hash256(input_msg);
-    std::vector<uint8_t> xof_output = ascon_xof128(input_msg, 32);
-
-    std::cout << "Ascon-Hash256: ";
-    for (auto b : hash_output) std::cout << std::hex << std::setw(2) << std::setfill('0') << (int)b;
-    std::cout << std::endl;
-
-    std::cout << "Ascon-XOF128 (256-bit): ";
-    for (auto b : xof_output) std::cout << std::hex << std::setw(2) << std::setfill('0') << (int)b;
-    std::cout << std::endl;
-
-    return 0;
-}
-
