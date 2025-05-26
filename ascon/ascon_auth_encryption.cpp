@@ -2,7 +2,7 @@
 #include <cstring>
 #include <cstdint>
 #include <iomanip>
-#include "ascon_permutation.cpp"
+#include "ascon_permutation.h"
 #define ASCON_ROUNDS 12
 #define RATE 8   // Bytes absorbed per permutation round (64 bits)
 
